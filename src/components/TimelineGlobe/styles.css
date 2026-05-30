@@ -1,0 +1,10 @@
+/* Required styles for the Timeline Globe component */
+
+.timeline-connector {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 45px;
+  border-top: 1.5px dashed #e83a59;
+  opacity: 0.6;
+}

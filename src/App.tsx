@@ -12,7 +12,7 @@ import Capabilities from "./sections/Capabilities";
 import CTA from "./sections/CTA";
 import Footer from "./sections/Footer";
 import CompanyOrbitFunction from "./pages/orbit/Orbit";
-
+import TimelineGlobe from "@/components/TimelineGlobe/index";
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -81,7 +81,7 @@ function Home() {
         <Hero />
       </div>
       <main style={{ position: "relative", zIndex: 5, background: "#0a0a0a" }}>
-        <Shift />
+        <TimelineGlobe />
         <DocumentIsMore />
         <Ontology />
         <IntelligenceLayer />
