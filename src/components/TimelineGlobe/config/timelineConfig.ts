@@ -62,7 +62,7 @@ const framerPreset = {
   },
   path: {
     radiusOffset: 0.05, 
-    turns: 2, // Lower turns means a flatter line
+    turns: 3, // Lower turns means a flatter line
     verticalSpread: 0.8, // Reduced to 0.4 to make the line flatter/closer to equator, reducing the steep angle
     totalPoints: 400,
     coreLine: { color: '#ffb3c1', thickness: 1.5, opacity: 0.9 },
@@ -128,7 +128,40 @@ export const timelineConfig = {
       description: "Created a centralised platform for railway in mumbai", 
       category: "Product",
       image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400&h=200",
+      progressOffset: 0.3, 
+    },
+    { 
+      title: "Inaugurated Mumbai Branch", 
+      date: "January 2025", 
+      description: "Changed our approach incorporating AI and delievering agent rich products", 
+      category: "Milestone",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400&h=200",
+      progressOffset: 0.4, 
+    },
+    { 
+      title: "Reached XYZ Valuation", 
+      date: "January 2025", 
+      description: "Changed our approach incorporating AI and delievering agent rich products", 
+      category: "Milestone",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400&h=200",
+      progressOffset: 0.5, 
+    },
+
+    { 
+      title: "Changed direction towards OCR", 
+      date: "January 2025", 
+      description: "Changed our approach incorporating AI and delievering agent rich products", 
+      category: "Milestone",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400&h=200",
       progressOffset: 0.6, 
+    },
+    { 
+      title: "Reached 100 Employees", 
+      date: "January 2025", 
+      description: "Changed our approach incorporating AI and delievering agent rich products", 
+      category: "Milestone",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400&h=200",
+      progressOffset: 0.7, 
     },
     { 
       title: "AI adoption", 
@@ -137,6 +170,23 @@ export const timelineConfig = {
       category: "Milestone",
       image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400&h=200",
       progressOffset: 0.8, 
+    },
+    { 
+      title: "ABC certification", 
+      date: "January 2025", 
+      description: "Changed our approach incorporating AI and delievering agent rich products", 
+      category: "Milestone",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400&h=200",
+      progressOffset: 0.9, 
+    },
+    
+    { 
+      title: "Document as an infrastructure", 
+      date: "January 2025", 
+      description: "Changed our approach incorporating AI and delievering agent rich products", 
+      category: "Milestone",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400&h=200",
+      progressOffset: 1, 
     },
   ]
 };

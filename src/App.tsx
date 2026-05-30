@@ -13,6 +13,7 @@ import CTA from "./sections/CTA";
 import Footer from "./sections/Footer";
 import CompanyOrbitFunction from "./pages/orbit/Orbit";
 import TimelineGlobe from "@/components/TimelineGlobe/index";
+import GlobeShift from "@/pages/GlobeShift";
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -81,7 +82,7 @@ function Home() {
         <Hero />
       </div>
       <main style={{ position: "relative", zIndex: 5, background: "#0a0a0a" }}>
-        <TimelineGlobe />
+        <Shift />
         <DocumentIsMore />
         <Ontology />
         <IntelligenceLayer />
@@ -98,6 +99,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/orbit" element={<CompanyOrbitFunction />} />
+        <Route path="/shift" element={<GlobeShift />} />
       </Routes>
     </Router>
   );
