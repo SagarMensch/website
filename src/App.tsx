@@ -11,6 +11,8 @@ import IntelligenceLayer from "./sections/IntelligenceLayer";
 import Capabilities from "./sections/Capabilities";
 import CTA from "./sections/CTA";
 import Footer from "./sections/Footer";
+import CompanyOrbitFunction from "./pages/orbit/Orbit";
+import TimelineGlobe from "@/components/TimelineGlobe/index";
 import GlobeShift from "@/pages/GlobeShift";
 import Orbit from "./pages/orbit";
 declare global {

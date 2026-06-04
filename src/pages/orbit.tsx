@@ -1,4 +1,6 @@
 import InfiniteMenu from '@/components/InfiniteMenu'
+import Navigation from "@/sections/Navigation";
+import Footer from "@/sections/Footer";
 
 const items = [
   { image: '/images_for_website/AdobeStock_138352374.jpeg', link: '#', title: 'Gallery Image 1', description: 'Explore our latest document workflow capabilities.' },
@@ -32,7 +34,9 @@ const items = [
 export default function Orbit(){
     return(
     <div style={{ height: '100vh', position: 'relative', backgroundColor: 'black' }}>
+        <Navigation/>
         <InfiniteMenu items={items} scale={1} />
+        <Footer />
     </div>
     )
 }
