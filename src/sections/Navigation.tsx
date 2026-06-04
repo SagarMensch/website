@@ -29,13 +29,11 @@ export default function Navigation() {
       >
         <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2.5">
-            <div className="bg-white px-2 py-1.5 rounded-lg flex items-center justify-center">
-              <img
-                src="/SequelStrinAI_Logo.png"
-                alt="SequelString AI"
-                className="h-6 w-auto"
-              />
-            </div>
+            <img
+              src="/SequelStrinAI_Logo.png"
+              alt="SequelString AI"
+              className="h-8 w-auto drop-shadow-md"
+            />
           </a>
           <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (

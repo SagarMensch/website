@@ -11,9 +11,8 @@ import IntelligenceLayer from "./sections/IntelligenceLayer";
 import Capabilities from "./sections/Capabilities";
 import CTA from "./sections/CTA";
 import Footer from "./sections/Footer";
-import CompanyOrbitFunction from "./pages/orbit/Orbit";
-import TimelineGlobe from "@/components/TimelineGlobe/index";
 import GlobeShift from "@/pages/GlobeShift";
+import Orbit from "./pages/orbit";
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -98,7 +97,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/orbit" element={<CompanyOrbitFunction />} />
+        <Route path="/orbit" element={<Orbit />} />
         <Route path="/shift" element={<GlobeShift />} />
       </Routes>
     </Router>

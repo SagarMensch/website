@@ -8,11 +8,10 @@ interface MilestoneNodeProps {
   position: THREE.Vector3;
   active: boolean;
   reached: boolean;
-  index: number;
-  children: React.ReactNode;
+  title: string;
 }
 
-export default function MilestoneNode({ position, active, reached, index, children }: MilestoneNodeProps) {
+export default function MilestoneNode({ position, active, reached, title }: MilestoneNodeProps) {
   const pulseRef = useRef<THREE.Mesh>(null);
   const { nodes } = timelineConfig;
 
@@ -49,8 +48,6 @@ export default function MilestoneNode({ position, active, reached, index, childr
     <group position={position}>
       {/* 2D Flat Marker (Billboard keeps it facing the camera perfectly) */}
       <Billboard>
-        {/* By moving it +0.1 on the Billboard's local Z axis, it moves directly towards the camera lens. 
-            This perfectly solves all 3D layering issues without the marker appearing to "fly" off the line! */}
         <group position={[0, 0, 0.1]}>
           {/* Animated Pulse Field - ONLY SHOWS WHEN ACTIVELY FOCUSED */}
           {active && (
@@ -114,32 +111,22 @@ export default function MilestoneNode({ position, active, reached, index, childr
       
       {/* Floating Index Label - SHOWS FOR ALL REACHED NODES */}
       {reached && (
-        <Html distanceFactor={10} zIndexRange={[50, 0]} position={[0, nodes.activeSize + 0.08, 0]} center transform={false}>
+        <Html distanceFactor={5} zIndexRange={[50, 0]} position={[0, nodes.activeSize + 0.15, 0]} center transform={false}>
           <div 
             style={{
               backgroundColor: nodes.labelBg,
               color: active ? nodes.labelActiveColor : nodes.labelInactiveColor,
-              fontSize: nodes.labelFontSize, 
-              padding: nodes.labelPadding,   
+              fontSize: '4px', 
+              padding: '2px 6px',   
               borderRadius: '999px',
               fontWeight: 'bold',
               transition: 'all 0.3s ease',
-              whiteSpace: 'nowrap'
+              whiteSpace: 'nowrap',
+              border: active ? `0.5px solid ${nodes.emissiveColor}` : '0.5px solid transparent',
+              boxShadow: active ? `0 0 5px ${nodes.emissiveColor}40` : 'none'
             }}
           >
-            0{index + 1}
-          </div>
-        </Html>
-      )}
-
-      {/* Main Content Card - ONLY SHOWS WHEN ACTIVELY FOCUSED (One at a time) */}
-      {active && (
-        <Html distanceFactor={8} zIndexRange={[100, 0]} transform={false} center>
-          <div className="relative pointer-events-auto">
-            <div className="timeline-connector"></div>
-            <div className="absolute left-[60px] top-1/2 -translate-y-1/2">
-              {children}
-            </div>
+            {title}
           </div>
         </Html>
       )}
